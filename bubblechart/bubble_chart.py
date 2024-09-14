@@ -89,7 +89,6 @@ class BubbleChart:
                 self.sax = all_axes['size']
         # If no figure is given, we will create our own layout from scratch
         else:
-            grid_kws = {'width_ratios': (0.8, 0.15), 'wspace': 0.2}
             self.fig, all_axes = \
                 plt.subplot_mosaic([['plot', 'size'], ['plot', 'color']], 
                                    width_ratios=[0.85, 0.12], height_ratios=[0.4, 0.6], gridspec_kw={ 'wspace': 0.03 })
