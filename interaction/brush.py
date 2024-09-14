@@ -34,14 +34,6 @@ class Brush:
         self.cb(selected.index.tolist())
 
 class interaction:
-    def __init__(self, chart):
-        self.chart = chart 
-    
-    def update(self, selected):
-        self.chart.selected = selected 
-        self.chart.draw()
-
-class interaction:
     def __init__(self):
         self.fig, self.ax = plt.subplots()
         self.x = np.random.rand(100)
