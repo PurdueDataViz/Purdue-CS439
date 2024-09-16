@@ -23,14 +23,6 @@ from PyQt6.QtWidgets import QGridLayout, QPushButton, QComboBox, QSlider, QLabel
 from numpy.typing import ArrayLike
 from bubble_chart import BubbleChart
 
-class interaction:
-    def __init__(self, chart):
-        self.chart = chart 
-    
-    def update(self, selected):
-        chart.selected = selected 
-        chart.draw()
-
 class ApplicationWindow(QtWidgets.QMainWindow):
     def __init__(self, args):
         super().__init__()
