@@ -7,7 +7,7 @@ from numpy.typing import ArrayLike
 import numpy as np
 
 class Brush:
-    def __init__(self, xs: ArrayLike, ys: ArrayLike, ax: mpl.axes, cb,
+    def __init__(self, xs: ArrayLike, ys: ArrayLike, ax: mpl.axes.Axes, cb,
                  color='red', alpha=0.6, edgecolor='black'):
         self.df = pd.DataFrame()
         self.df['x'] = xs

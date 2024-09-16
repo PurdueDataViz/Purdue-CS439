@@ -49,21 +49,34 @@ class BubbleChart:
 
         fig : `~matplotlib.Figure`
             The figure in which the bubble chart and its legends is drawn.
+            If None is provided, one will be created along with a layout
+            for the plot and its legends.
 
         ax : `~matplotlib.axes.Axes`
             The `~.axes.Axes` instance in which the bubble chart is drawn.
-
+            If None is provided, one will be created for the plot along
+            with two more axes for the size and colorbar legends.
+            
         cax : `~matplotlib.axes.Axes`
             The `~.axes.Axes` instance in which the colorbar is drawn.
+            If None is provided, one will be created, either by
+            stealing from the provided axis or as part of a grid Axes
+            layout.
 
         sax : `~matplotlib.axes.Axes`
             The `~.axes.Axes` instance in which the size legend is drawn.
+            If none is provided, it will either be created as part of 
+            a grid Axes layout or the size legend will be drawn on top 
+            of the plot Axes. 
 
         figsize :` 2-tupple`
             The size of the figure (ignored if `fig` is provided)
 
         minsize, maxsize : `float`
             The range of bubble sizes that the `s` values will be mapped to.
+
+        cmap: `str` or `matplotlib.Colormap` 
+            The colormap to use in the bubble chart.
         """
         # depending on the info provided, create a layout
         # 1. Do we have an active figure?
