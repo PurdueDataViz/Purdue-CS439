@@ -15,7 +15,7 @@ def import_tree_from_dict(nodeinfo, parent=None):
         anode.set_attrs({'collapsed': False})
     if 'children' in nodeinfo.keys():
         for c in nodeinfo['children']:
-            achild = import_tree_from_dict(c, parent=anode)
+            notused = import_tree_from_dict(c, parent=anode)
     return anode
 
 def read_tree(filename):
@@ -81,16 +81,7 @@ if __name__ == '__main__':
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
     ax.set_axis_off()
-    ax.set_aspect('equal') #, adjustable='box')
-
-    # fig = plot_tree(root, "-ok") 
-    # fig.axes[0].set_title("Tree Plot Demonstration")
-
-    # graph = tree_to_dot(root, node_colour='red')
-    # print(graph)
-    # graph.write_png('dot.png')
-
-    # fig.show()  # Show figure
+    ax.set_aspect('equal') 
     plt.tight_layout()
     cid = fig.canvas.mpl_connect('button_press_event', inter.onclick)
     plt.show()
